@@ -1,0 +1,13 @@
+# fase	ordem	papel	modelo	modo
+# modelo: gemini | claude | codex. modo (só codex): read-only | workspace-write. Gemini e Claude rodam sempre em leitura.
+# Dentro da fase, cada papel recebe a saída do anterior; o último consolida o artefato da fase.
+1	1	analista-requisitos	gemini	leitura
+1	2	analista-riscos	gemini	leitura
+2	1	arquiteto	claude	leitura
+2	2	planejador-testes	claude	leitura
+3	1	implementador	codex	workspace-write
+3	2	verificador	codex	read-only
+4	1	revisor-seguranca	claude	leitura
+4	2	revisor-qualidade	claude	leitura
+5	1	engenheiro-qa	gemini	leitura
+5	2	redator-tecnico	gemini	leitura

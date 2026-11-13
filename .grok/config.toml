@@ -1,0 +1,7 @@
+[mcp_servers.claude]
+command = "claude"
+args = [
+    "mcp",
+    "serve",
+]
+enabled = true
